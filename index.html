@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Library</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    .split {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    
+    .left {
+      left: 0;
+     
+    }
+    
+    .right {
+      right: 0;
+    }
+    </style>
+</head>
+<body>
+  <div class="split left">
+  <div class="container mt-4">
+    <h1>Book Library</h1>
+    <h2>Add a New Book</h2>
+    <form id="create-form">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" required>
+      </div>
+      <div class="form-group">
+        <label for="author">Author:</label>
+        <input type="text" class="form-control" id="author" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" class="form-control" rows="4" cols="50"></textarea>
+      </div>
+      <button type="submit" value="Submit" id="create-button" class="btn btn-primary">Add Book</button>
+    </form>
+  </div>
+  </div>
+
+  <div class="split right">
+    <!-- Books List -->
+    <h2>Books List</h2>
+    <table class="table table-hover" id="book-list">
+      <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Author</th>
+          </tr>
+      </thead>
+      <tbody id="book-table-body">
+
+      </tbody>
+  </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
